@@ -3,19 +3,19 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [{ 
-                    message: "Please enter the title of your project.",
+                    message: "Please enter the title of your project:",
                     type: "input",
                     name: "title",
-                    validate: function (input) { 
-                        return input.length >= 2
+                    validate: function(input) { 
+                        return input.length >= 2;
                     }
                    }, 
                    {
-                    message:  "Please enter your project's description.",
+                    message:  "Please enter your project's description:",
                     type: "input",
                     name: "description",
                    },
@@ -43,15 +43,15 @@ const questions = [{
                     message: "Please enter your email",
                     type: "input",
                     name: "email",
-                    validate: function (input) { 
-                        if (!input.uncludes('@')){
+                    validate: function(input){ 
+                        if (!input.includes('@')){
                             return false; 
                         }
                         emailparts = input.split('@');
-                        if (emailparts.length !=2){
+                        if (emailparts.length != 2){
                             return false;
                         }
-                        if (!emailparts[-1].includes('.')){
+                        if (!emailparts[1].includes('.')){
                             return false;
                         }
                         return true;
@@ -68,16 +68,16 @@ const questions = [{
                    {
                     message: "Please enter your license",
                     type: 'list',
-                    name: "licence",
+                    name: "license",
                     choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License v3.0', 'BSD 2-Clause \"Simplified\" License', 
-                              'BSD 3-Clause \"New\" or \"Revised\" License', 'GNU General Public License v2.0', 'The Unlicense'],
-                   }
+                              'BSD 3-Clause \"New\" or \"Revised\" License', 'GNU General Public License v2.0', 'The Unlicense', 'None'],
+                    }
                 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     text = generateMarkdown(data);
-    fs.appendFile(filename, text, (err) =>
+    fs.appendFile(fileName, text, (err) =>
       err ? console.log(err) : console.log('Success!')
     );
 }
@@ -88,9 +88,8 @@ function init() {
   .prompt(questions)
   .then((data) => {
     console.log(data);
-    const filename = `README_${data.name.toLowerCase().split(' ').join('')}.md`;
-
-    
+    const fileName =  `README_${data.username.toLowerCase().split(' ').join('')}.md`;
+    writeToFile(fileName, data);
   });
 
 }
