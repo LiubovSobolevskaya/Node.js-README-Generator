@@ -20,13 +20,34 @@ Finally, if you click on the links in the Table of Contents, you will be taken t
 * [JavaScript](https://www.javascript.com/)   
 * [Node.js](https://nodejs.dev/)
 
+
+__________________________
+
+## Code Example
+
+This is a function called renderLicenseSection that takes in a license parameter. If the license is not equal to "None", it returns a string with a License section that includes a rendered license badge and a link to the license. If the license is "None", it returns an empty string.
+
+```javascript
+function renderLicenseSection(license) {
+    if (license !== "None"){
+        return `## Licence
+    ${renderLicenseBadge(license)} <br/>
+    Licensed under the [${license}](${renderLicenseLink(license)}).`
+    }
+    else{
+        return "";
+  }
+}
+```
+____________________________________
+
 ## Web application's appearance and functionality
 
 ![](todo)
 
 ## Author Info
 
-### Liubov Sobolevkaya
+### Liubov Sobolevskaya
 * [LinkedIn](https://www.linkedin.com/in/liubov-sobolevskaya-45756a101/)
 * [Github](https://github.com/LiubovSobolevskaya)
 * [Kaggle](https://www.kaggle.com/lyubovsobolevskaya)
