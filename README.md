@@ -20,7 +20,10 @@ Finally, if you click on the links in the Table of Contents, you will be taken t
 * [JavaScript](https://www.javascript.com/)   
 * [Node.js](https://nodejs.dev/)
 
-
+## Requirements
+```
+npm install
+```
 __________________________
 
 ## Code Example
@@ -42,8 +45,12 @@ function renderLicenseSection(license) {
 ____________________________________
 
 ## Web application's appearance and functionality
+After entering information to the terminal
+![](./imgs/Prompt%20example.png)
+You'll get the following MD file:
 
-![](todo)
+<img src ="./imgs/example.png" height = 400px>
+
 
 ## Author Info
 

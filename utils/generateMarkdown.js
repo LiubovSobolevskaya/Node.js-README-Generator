@@ -1,4 +1,5 @@
 
+// returns a link to the license information based on the provided license
 function renderLicenseLink(license) {
   switch(license){
     case "MIT License": return "https://choosealicense.com/licenses/mit/";
@@ -12,7 +13,7 @@ function renderLicenseLink(license) {
   }
 }
 
-
+// returns a link to the license badge image based on the provided license
 function renderLicenseBadge(license) {
     switch(license){
       case  "MIT License": return `![${license}](https://img.shields.io/badge/license-MIT-green.svg)`;
@@ -26,7 +27,7 @@ function renderLicenseBadge(license) {
     }
 }
 
-
+// takes rendered license badge and link to the license info to generate a correspondig section in README
 function renderLicenseSection(license) {
   if (license !== "None"){
     return `## Licence
@@ -38,7 +39,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+//function to generate markdown for README that uses temlate literals and provided data
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
@@ -50,7 +51,7 @@ function generateMarkdown(data) {
   * [Installation](#Installation)
   * [Usage](#Usage)
   * [License](#License)
-  * [Contribution Guidelines](#Contribution-Guidelines)
+  * [Contributing](#Contributing)
   * [Tests](#Tests)
   * [Questions](#Questions)
 
@@ -62,7 +63,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## Contribution Guidelines
+  ## Contributing
   
   ${data.contribution}
     
@@ -70,7 +71,7 @@ function generateMarkdown(data) {
   ${data.test}
     
   ## Questions
-  Please feel free to reach me at [my email](mailto:${data.email}) or at [${data.username}](https://github.com/${data.username})
+  Please feel free to reach me with any questions at [my email](mailto:${data.email}) or at [${data.username}](https://github.com/${data.username})
   `;
 }
 
