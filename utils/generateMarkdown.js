@@ -68,7 +68,7 @@ function generateMarkdown(data) {
   ${data.contribution}
     
   ## Tests
-  ${data.test}
+  ${data.tests}
     
   ## Questions
   Please feel free to reach me with any questions at [my email](mailto:${data.email}) or at [${data.username}](https://github.com/${data.username})

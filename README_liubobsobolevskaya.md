@@ -1,8 +1,8 @@
-# ReadMe Generator 
+# Profesional README generator
   ![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
   
   ## Description
-  Javascript implementation of a ReadMe generator 
+  javascript implementation of README generator
 
   ## Table Of Content 
   * [Installation](#Installation)
@@ -13,7 +13,7 @@
   * [Questions](#Questions)
 
   ## Installation
-  Please run <br/>```npm install``` <br/> to install the dependencies
+  Please run <br/> ``` npm install```
   
   ## Licence
   ![MIT License](https://img.shields.io/badge/license-MIT-green.svg) <br/>
@@ -27,9 +27,8 @@
   None
     
   ## Tests
-
-  None
+  undefined
     
   ## Questions
-  Please feel free to reach me with any questions at [my email](mailto:lubava@gmail.com) or at [LiubovSobolevskaya](https://github.com/LiubovSobolevskaya)
+  Please feel free to reach me with any questions at [my email](mailto:lsneben@ncnd.com) or at [LiubobSobolevskaya](https://github.com/LiubobSobolevskaya)
   
