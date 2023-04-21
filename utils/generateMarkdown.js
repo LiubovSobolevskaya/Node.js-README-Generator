@@ -64,7 +64,6 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## Contributing
-  
   ${data.contribution}
     
   ## Tests
