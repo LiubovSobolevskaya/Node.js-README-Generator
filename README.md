@@ -1,7 +1,8 @@
 # Node.js-README-Generator
 7th assignment of UCB Extension Web Development Bootcamp
 
-Here is the link to video about how this application operates ![](https://drive.google.com/file/d/1C2PlhNPR16mcpJPQHuLEfCStVHcMQc70/view)
+Here is the [link to video](https://drive.google.com/file/d/1C2PlhNPR16mcpJPQHuLEfCStVHcMQc70/view) about how this application operates 
+
 
 ## Desciption
 If you use a command-line application that asks for information about your application repository, a high-quality and professional README.md file will be generated for you. This README file will include the title of your project and sections for Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
