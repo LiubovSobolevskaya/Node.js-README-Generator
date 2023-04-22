@@ -75,7 +75,7 @@ const questions = [{
 //generates the markdown content by calling the generateMarkdown function with the data 
 function writeToFile(fileName, data) {
     text = generateMarkdown(data);
-    fs.appendFile(fileName, text, (err) =>
+    fs.writeFile(fileName, text, (err) =>
       err ? console.log(err) : console.log('Success!')
     );
 }
@@ -84,7 +84,6 @@ function init() {
    inquirer
   .prompt(questions)
   .then((data) => {
-    console.log(data);
     const fileName =  `README_${data.username.toLowerCase().split(' ').join('')}.md`;
     writeToFile(fileName, data);
   });
